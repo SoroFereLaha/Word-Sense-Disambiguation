@@ -1,0 +1,61 @@
+{% extends 'parts/layout.html' %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="container mt-5 mb-5">
+
+        <h1 class="mb-5 text-center">PlATEFORME D'IA POUR WSD</h1>
+        <div class="row">
+          
+
+          <div class="col-md-4 stretch-card grid-margin">
+            
+            <div class="card bg-gradient-info card-img-holder text-white">
+              <a href="{% url 'lesk' %}" class="text-white text-decoration-none">
+              <div class="card-body">
+                <img src="../../media/circle.png" class="card-img-absolute" alt="circle-image" />
+                <h4 class="font-weight-normal mb-3">
+                </h4>
+                <h2 class="mb-5">Standard</h2>
+                <h6 class="card-text">Lesk</h6>
+              </div>
+            </a>
+            </div>
+            
+          </div>
+        
+          <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-success card-img-holder text-white">
+              <a href="{% url 'knn' %}" class="text-white text-decoration-none">
+              <div class="card-body">
+                <img src="../../media/circle.png" class="card-img-absolute" alt="circle-image" />
+                <h4 class="font-weight-normal mb-3">
+                </h4>
+                <h2 class="mb-5">Machine learning</h2>
+                <h6 class="card-text">KNN</h6>
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-danger card-img-holder text-white">
+              <a href="{% url 'bilstm' %}" class="text-white text-decoration-none">
+              <div class="card-body">
+                <img src="../../media/circle.png" class="card-img-absolute" alt="circle-image" />
+                <h4 class="font-weight-normal mb-3"></h4>
+                <h2 class="mb-5">Deep learning</h2>
+                <h6 class="card-text">BiLSTM</h6>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {% endblock content %}

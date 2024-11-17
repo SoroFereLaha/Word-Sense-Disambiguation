@@ -1,0 +1,73 @@
+{% extends 'parts/layout.html' %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="container mt-5 mb-5">
+
+    
+
+
+
+        <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title mb-5">Knn algorithm</h4>
+                <!-- <p class="card-description"> Découvrez la sens de la parole maintenant. </p> -->
+                <form method="POST" class="forms-sample">
+                  
+                 {% csrf_token %}
+
+
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Votre phrase</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Votre phrase ici" name="phrase"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputUsername1">mot ambigu</label>
+                    <input type="text" class="form-control" id="exampleInputUsername1" placeholder="mot ambigu" name="word">
+                  </div>
+                
+                  
+                  
+                  <button type="submit" class="btn btn-gradient-primary me-2">Traite</button>
+    
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">{{word}}</h4>
+                <p class="card-description"> {{phrase}} </p>
+                <h6>{{sense_key}}</h6>
+
+                <p>{{definition}}</p>
+               
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+            
+          
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock content %}
